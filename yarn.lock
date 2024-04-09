@@ -1065,7 +1065,7 @@ hexo-renderer-ejs@^2.0.0:
   dependencies:
     ejs "^3.1.6"
 
-hexo-renderer-marked@^6.0.0:
+hexo-renderer-marked@^6.3.0:
   version "6.3.0"
   resolved "https://registry.yarnpkg.com/hexo-renderer-marked/-/hexo-renderer-marked-6.3.0.tgz#be8680ecad9633964a0c26a5f99859247d996aca"
   integrity sha512-V/ATcJ+tZHkTJSbScPzzHKmrwVMohU8i9MfuX9jp07Un/NpPtaTP821unP3JPu+O1nNLWMi+3xRbFRdm+8vajw==
@@ -1113,11 +1113,6 @@ hexo-theme-aurora@^2.5.3:
     vue-router "^4.2.4"
     vue3-click-away "^1.2.4"
     vue3-lazyload "^0.3.8"
-
-hexo-theme-landscape@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/hexo-theme-landscape/-/hexo-theme-landscape-1.0.0.tgz#43a549ebb2bea73196200ee4397feb764131a481"
-  integrity sha512-bWQJWMqQI78wWiJPQZq5pJBH20TM442ShCaHGRetuEgMraxH0OKxB3NTupJzNEkzEk8DV2yrdizkXdKN6i501A==
 
 hexo-util@^2.0.0, hexo-util@^2.5.0, hexo-util@^2.7.0:
   version "2.7.0"
