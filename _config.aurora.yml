@@ -12,7 +12,7 @@ site:
   subtitle: 小野's Blog
   author: 小野
   nick: xiaoye
-  description: <p>努力在前端的山上爬一爬⛰️</p><p><br>京东科技-前端开发工程师</br></p>
+  description: <p>努力在前端的山上爬一爬⛰️</p><p><b>京东科技-前端开发工程师</b></p>
   link: '/'
   language: cn
   multi_language: true
@@ -38,6 +38,12 @@ site:
 #！ @docs https://aurora.tridiamond.tech/guide/authors.html
 #! ---------------------------------------------------------------
 authors:
+  name: 小野
+  avatar: https://i.postimg.cc/tCrZV9P5/D85-BD085-F159-4901-B64-F-677-B735-E3-E09.jpg
+  link: https://github.com/shmily101
+  description: <p>努力在前端的山上爬一爬⛰️</p><p><b>京东科技-前端开发工程师</b></p>
+  socials:
+    github: https://github.com/shmily101
   ##! example
   # TriDiamond:
   #   name: TriDiamond
