@@ -14,7 +14,7 @@ site:
   nick: xiaoye
   description: <p>努力在前端的山上爬一爬⛰️</p><p><b>京东科技-前端开发工程师</b></p>
   link: '/'
-  language: cn
+  language: zh-CN
   multi_language: true
   logo: https://i.postimg.cc/yY3Bm1Cy/image.png
   avatar: https://i.postimg.cc/tCrZV9P5/D85-BD085-F159-4901-B64-F-677-B735-E3-E09.jpg
@@ -68,7 +68,7 @@ menu:
 #! @docs https://aurora.tridiamond.tech/guide/theme.html
 #! ---------------------------------------------------------------
 theme:
-  dark_mode: auto
+  dark_mode: false
   profile_shape: circle # support `circle`, `diamond`, `rounded`
   feature: true
   gradient:
