@@ -9,10 +9,10 @@
 #！ @docs https://aurora.tridiamond.tech/guide/configuration.html
 #! ---------------------------------------------------------------
 site:
-  subtitle: Aurora's Blog
-  author: Aurora
-  nick: Auroral UI
-  description:
+  subtitle: 小野's Blog
+  author: 小野
+  nick: xiaoye
+  description: 努力在前端的山上爬一爬⛰️
   link: '/'
   language: en
   multi_language: true
