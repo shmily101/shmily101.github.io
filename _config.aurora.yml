@@ -12,12 +12,12 @@ site:
   subtitle: 小野's Blog
   author: 小野
   nick: xiaoye
-  description: 努力在前端的山上爬一爬⛰️
+  description: <p>努力在前端的山上爬一爬⛰️</p><p>京东科技-前端开发工程师</p>
   link: '/'
-  language: en
+  language: cn
   multi_language: true
-  logo:
-  avatar:
+  logo: https://postimg.cc/bsPK8jJZ
+  avatar: https://postimg.cc/7f2YF8KG
   beian:
     number: ''
     link: ''
@@ -26,7 +26,7 @@ site:
     link: ''
   # Start date of the blog YYY-MM-DD
   # 博客开始运行日期
-  started_date:
+  started_date: 2024-04-09
   # Path unique identifier (文章 URL 唯一标识)
   # uid: use unique ID
   # slug: use generated slug base on title
