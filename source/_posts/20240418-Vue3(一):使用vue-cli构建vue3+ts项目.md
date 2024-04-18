@@ -30,6 +30,8 @@ vue create ts-demo
 
 ## 构建项目
 
+使用vue-cli构建项目的过程中，选择了不同的特性有不同的配置需要设置。这里只介绍一种选择了**Babel, TS, Router, Vuex, CSS Pre-processors, Linter**的情况。
+
 ##### (1)
 
 安装完脚手架后，执行：
@@ -156,8 +158,12 @@ Vue CLI v5.0.8
 ```
 Vue CLI v5.0.8
 ? Please pick a preset: Manually select features
-? Check the features needed for your project: Babel, Linter
+? Check the features needed for your project: Babel, TS, Router, Vuex, CSS Pre-processors, Linter
 ? Choose a version of Vue.js that you want to start the project with 3.x
+? Use class-style component syntax? No
+? Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
+? Use history mode for router? (Requires proper server setup for index fallback in production) No
+? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)
 ? Pick a linter / formatter config: (Use arrow keys)
 ❯ ESLint with error prevention only  // 只进行报错提醒
   ESLint + Airbnb config   // 不严谨模式
@@ -173,9 +179,13 @@ Vue CLI v5.0.8
 ```
 Vue CLI v5.0.8
 ? Please pick a preset: Manually select features
-? Check the features needed for your project: Babel, Linter
+? Check the features needed for your project: Babel, TS, Router, Vuex, CSS Pre-processors, Linter
 ? Choose a version of Vue.js that you want to start the project with 3.x
-? Pick a linter / formatter config: Basic
+? Use class-style component syntax? No
+? Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
+? Use history mode for router? (Requires proper server setup for index fallback in production) No
+? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)
+? Pick a linter / formatter config: Standard
 ? Pick additional lint features: (Press <space> to select, <a> to toggle all, <i> to invert selection, and <enter> to proceed)
 ❯◉ Lint on save   // 保存时检查
  ◯ Lint and fix on commit     // commit时检查
@@ -188,13 +198,17 @@ Vue CLI v5.0.8
 ```
 Vue CLI v5.0.8
 ? Please pick a preset: Manually select features
-? Check the features needed for your project: Babel, Linter
+? Check the features needed for your project: Babel, TS, Router, Vuex, CSS Pre-processors, Linter
 ? Choose a version of Vue.js that you want to start the project with 3.x
-? Pick a linter / formatter config: Basic
+? Use class-style component syntax? No
+? Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
+? Use history mode for router? (Requires proper server setup for index fallback in production) No
+? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)
+? Pick a linter / formatter config: Standard
 ? Pick additional lint features: Lint on save
 ? Where do you prefer placing config for Babel, ESLint, etc.? (Use arrow keys)
-❯ In dedicated config files 
-  In package.json 
+❯ In dedicated config files     // 单独文件配置
+  In package.json     // 在package.json中配置
 ```
 
 ##### (12)
@@ -203,9 +217,13 @@ Vue CLI v5.0.8
 
 ```
 ? Please pick a preset: Manually select features
-? Check the features needed for your project: Babel, Linter
+? Check the features needed for your project: Babel, TS, Router, Vuex, CSS Pre-processors, Linter
 ? Choose a version of Vue.js that you want to start the project with 3.x
-? Pick a linter / formatter config: Basic
+? Use class-style component syntax? No
+? Use Babel alongside TypeScript (required for modern mode, auto-detected polyfills, transpiling JSX)? Yes
+? Use history mode for router? (Requires proper server setup for index fallback in production) No
+? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): Sass/SCSS (with dart-sass)
+? Pick a linter / formatter config: Standard
 ? Pick additional lint features: Lint on save
 ? Where do you prefer placing config for Babel, ESLint, etc.? In dedicated config files
 ? Save this as a preset for future projects? (y/N) 
