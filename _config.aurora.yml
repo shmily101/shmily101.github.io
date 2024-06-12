@@ -16,8 +16,8 @@ site:
   link: '/'
   language: zh-CN
   multi_language: true
-  logo: 'https://i.postimg.cc/BvYwyyVK/image.png'
-  avatar: 'https://i.postimg.cc/02CgntPp/ME1718162549027.jpg'
+  logo: 'source/avatar.jpg'
+  avatar: 'source/logo.jpg'
   beian:
     number: ''
     link: ''
