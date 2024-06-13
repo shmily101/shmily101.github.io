@@ -117,7 +117,7 @@ site_meta:
 
 # For local development only!
 gitalk:
-  enable: true
+  enable: false
   autoExpand: true
   clientID: ''
   clientSecret: ''
@@ -158,15 +158,15 @@ twikoo:
 # Waline comment plugin
 # see https://waline.js.org/guide/get-started/
 waline:
-  enable: false
+  enable: true
   recentComment: true
-  reaction: false
-  login: 'disable'
+  reaction: true
+  login: 'enable'
   meta: ['nick', 'mail']
-  requiredMeta: ['nick', 'mail']
+  requiredMeta: ['nick']
   commentSorting: 'latest'
   wordLimit: 0
-  imageUploader: false
+  imageUploader: true
   pageSize: 10
   serverURL: '' # 填写服务端地址
 
