@@ -168,7 +168,7 @@ waline:
   wordLimit: 0
   imageUploader: true
   pageSize: 10
-  serverURL: '' # 填写服务端地址
+  serverURL: 'https://shmily101-blog-waline-p1ck6yzui-xiaoyes-projects-4afe69b4.vercel.app/' # 填写服务端地址
 
 # Enable Busuanzi statistic plugin
 # see http://ibruce.info/2015/04/04/busuanzi/
