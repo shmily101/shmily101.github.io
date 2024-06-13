@@ -133,7 +133,7 @@ gitalk:
 # Valine comment plugin (recommended!)
 # see https://valine.js.org/quickstart.html
 valine:
-  enable: true
+  enable: false
   app_id:
   app_key:
   avatar: ''
@@ -158,7 +158,7 @@ twikoo:
 # Waline comment plugin
 # see https://waline.js.org/guide/get-started/
 waline:
-  enable: false
+  enable: true
   recentComment: true
   reaction: true
   login: 'enable'
