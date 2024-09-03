@@ -15,11 +15,13 @@ categories:
 还有一种类型的题目可以首先考虑二分，那就是和**平方根**相关的题目。不允许使用运算符，但需要求一个值的平方根，那么就考虑二分没跑了。比如leetcode [69.x 的平方根](https://leetcode.cn/problems/sqrtx/description/), [367.有效的完全平方数](https://leetcode.cn/problems/valid-perfect-square/description/)。
 
 :::tip
+
 因此要牢记，二分法的使用场景关键词：
 1. **有序数组**
 2. **数组中无重复元素**
 3. 时间复杂度**(OlogN)**
 4. **平方根**
+
 :::
 
 ## 怎么写二分？
@@ -268,6 +270,51 @@ var searchRange = function(nums, target) {
 };
 ```
 这道题的核心就是找两遍，先找最左边的边界，再找最右边的边界。找边界其实就是改变`target = nums[mid]`时的处理逻辑，找左边的边界就继续再左区间中找，找右边的边界就继续在右区间中找。
+
+##### 20240903补充
+之前一直没有尝试写过简化版的代码，今天试了一下，可以使用一个函数去简化两个二分的写法，本质还是先左边界后右边界，需要特别注意的是不同区间定义下，**跳出循环时`l`和`r`代表的意义**。
+
+首先是不管哪个区间，左边永远是闭合的，也就是说`mid`永远可以取到`l`，因此当不断寻找左边界的时候，最后跳出循环一定是当`left = mid`时，执行了`right = mid / right = mid + 1`跳出的，所以最终，`l` 会指向第一个等于目标值的位置。
+
+当不断寻找右边界的时候，最后跳出循环一定是执行了`left = mid + 1`跳出的，最终`l`一定会指向第一个大于目标值的位置。
+
+我们再来看右边界，**左闭右闭**区间时，mid可以取到r，当不断寻找左边界的时候，最后跳出循环是执行了`right = mid - 1`，最终`r`会指向第一个小于目标值的位置。
+
+当不断寻找右边界的时候，最后跳出循环是当`right = mid`时，执行了`left = mid + 1`跳出的，最终`r`会指向最后一个等于目标值的位置。
+
+**左闭右开**区间时，`mid`不能取到`r`，当不断寻找左边界的时候，最后跳出循环是执行了`right = mid`，最终`r`会指向第一个目标值的位置。
+
+当不断寻找右边界的时候，最后跳出循环是当`right = mid + 1`时，执行了`left = mid + 1`跳出的，最终`r`会指向第一个大于目标值的位置。
+
+（文字描述很绕，之后可以补个图）
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} target
+ * @return {number[]}
+ */
+var searchRange = function (nums, target) {
+  const binarySearch = (left) => {
+    let l = 0, r = nums.length - 1
+    let mid
+    while (l <= r) {
+      mid = Math.floor(l + (r - l) / 2)
+      if (nums[mid] > target || (left && nums[mid] === target)) r = mid - 1
+      else l = mid + 1
+      // 这个else包含：nums[mid] < target, !left && nums[mid] === target
+    }
+    return left ? l : r
+  }
+
+  const leftIndex = binarySearch(true)
+  const rightIndex = binarySearch(false)
+
+  if (nums[leftIndex] !== target || nums[rightIndex] !== target) {
+    return [-1, -1]
+  }
+  return [leftIndex, rightIndex]
+};
+```
 
 #### [69.x 的平方根](https://leetcode.cn/problems/sqrtx/description/)
 给你一个非负整数 `x` ，计算并返回 `x` 的 算术平方根 。
