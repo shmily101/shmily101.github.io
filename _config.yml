@@ -3,12 +3,12 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo
-subtitle: ''
-description: ''
-keywords:
+title: 小野's blog
+subtitle: '丢掉幻想 准备斗争'
+description: '努力在前端的山上爬一爬 ⛰️'
+keywords: '前端 00后'
 author: xiaoye
-language: en
+language: zh-CN
 timezone: ''
 
 # URL
