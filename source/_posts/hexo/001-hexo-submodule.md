@@ -73,9 +73,9 @@ git commit -m "Update submodule"
 
 更多操作和介绍可见：
 
-[在 hexo 中使用 git submodules 管理主题](https://juejin.cn/post/6844903751908605965)
+{% link 在 hexo 中使用 git submodules 管理主题 ,在 hexo 中使用 git submodules 管理主题 ,https://juejin.cn/post/6844903751908605965 %}
 
-[Git 工具 - 子模块](https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97)
+{% link Git 工具 - 子模块 ,Git 工具 - 子模块 ,https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97 %}
 
 ## 3. 使用子模块的注意事项
 - 版本同步：子模块的版本是独立管理的，需要手动同步子模块的版本。
