@@ -10,19 +10,17 @@ categories:
 
 当题目里出现了数组，且为**有序数组**，并强调**数组中无重复元素**时，就要考虑是否能够使用二分法了。因为若数组中有重复元素，二分法返回的下标就会出现不唯一的情况。（但也有一种情况特殊，就是直接让你求出重复元素的起始位置和终止位置，比如leetcode [34.在排序数组中查找元素的第一个和最后一个位置](https://leetcode.cn/problems/find-first-and-last-position-of-element-in-sorted-array/description/)）
 
-如果题目对时间复杂度有要求，规定在**O(logN)**的时间复杂度内解决问题，也可以考虑二分。
+如果题目对时间复杂度有要求，规定在<b>O(logN)</b>的时间复杂度内解决问题，也可以考虑二分。
 
 还有一种类型的题目可以首先考虑二分，那就是和**平方根**相关的题目。不允许使用运算符，但需要求一个值的平方根，那么就考虑二分没跑了。比如leetcode [69.x 的平方根](https://leetcode.cn/problems/sqrtx/description/), [367.有效的完全平方数](https://leetcode.cn/problems/valid-perfect-square/description/)。
 
-:::tip
-
+{% note info flat %}
 因此要牢记，二分法的使用场景关键词：
 1. **有序数组**
 2. **数组中无重复元素**
 3. 时间复杂度**(OlogN)**
 4. **平方根**
-
-:::
+{% endnote %}
 
 ## 怎么写二分？
 
