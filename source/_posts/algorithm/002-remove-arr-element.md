@@ -1,5 +1,5 @@
 ---
-title: 通关leetcode(一)：移除数组元素-快慢指针
+title: 通关leetcode(二)：移除数组元素-快慢指针
 tags:
   - algorithm
 categories:
