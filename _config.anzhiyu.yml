@@ -135,7 +135,7 @@ favicon: /favicon.ico
 
 # Avatar (头像)
 avatar:
-  img: https://i.ibb.co/S35345k/avatar.jpg
+  img: /img/avatar.jpg
   effect: false
 
 # Disable all banner image
