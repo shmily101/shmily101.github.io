@@ -51,5 +51,5 @@ function triggerFn() {
 
 {% note primary %}
 `ScrollTrigger`官方文档：
-![](scrollTigger.png)
+{% asset_img scrollTigger.png %}
 {% endnote %}
