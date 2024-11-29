@@ -1,5 +1,6 @@
 ---
 title: 优雅地在 hexo 博客中插入图片
+date: 2024-11-28 21:25:52
 tags:
   - hexo
   - images

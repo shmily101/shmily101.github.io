@@ -1,5 +1,6 @@
 ---
 title: 通关leetcode(一)：二分法
+date: 2024-09-02 17:25:52
 tags:
   - algorithm
 categories:
