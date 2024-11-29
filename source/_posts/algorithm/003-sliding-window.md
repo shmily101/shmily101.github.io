@@ -187,3 +187,53 @@ var minSubArrayLen = function (target, nums) {
 虽然是 for 循环里套 while ，但是在队列中，每个元素只会被加入/移出一次，所以这两个 while 循环的总操作次数不会超过 2n 次。因此，整体时间复杂度是 O(n)。
 
 这个题目是自己拓展的，没有 leetcode 程序可以验证，对代码有疑问可以随时提出交流。
+
+#### [560.和为 k 的子数组](https://leetcode.cn/problems/subarray-sum-equals-k/description/)
+给你一个整数数组 nums 和一个整数 k ，请你统计并返回 该数组中和为 k 的子数组的个数 。
+子数组是数组中元素的连续非空序列。
+```
+示例 1：
+输入：nums = [1,1,1], k = 2
+输出：2
+示例 2：
+输入：nums = [1,2,3], k = 3
+输出：2
+```
+提示：
+- 1 <= nums.length <= 2 * 104
+- -1000 <= nums[i] <= 1000
+- -107 <= k <= 107
+
+##### 解法
+```js
+/**
+ * @param {number[]} nums
+ * @param {number} k
+ * @return {number}
+ */
+var subarraySum = function (nums, k) {
+  // 获取前缀和数组
+  let sum = [0]
+  for (let i = 1; i <= nums.length; i++) {
+    sum[i] = sum[i - 1] + nums[i - 1]
+  }
+  let map = {}
+  let num = 0
+  // sum[j] - sum[i] = k
+  for (let i = 0; i < sum.length; i++) {
+    if (map[sum[i] - k]) {
+      num += map[sum[i] - k]
+    }
+    if (map[sum[i]]) {
+      map[sum[i]]++
+    } else {
+      map[sum[i]] = 1
+    }
+  }
+  return num
+};
+```
+
+这道题也是一个前缀和，核心公式是 `sum[j]-sum[i] = k` ，其实也就是找，当子数组是以下标 i 开始时，有几个 j 可以满足 `sum[j] = k + sum[i]` ，或者当子数组是以下标 j+1 结束时，有几个 i 可以满足 `sum[i] = sum[j] - k`。我们从左向右遍历的话，找以下标 j+1 结束时有几个 i 比较方便，一次遍历即可。维护一个 map ，用来记录前缀和的值出现了几次。遇到 sum[j] 时，在 map 里找一下 map[sum[j] - k] 有几个，就说明以下标 j 结束时，和等于 k 的子数组有几个。之后再把 sum[j] 也更新进 map 即可。
+
+不能用滑动窗口的原因是这道题和 209 不同， 209 表明了数组里的元素全为正整数，所以如果区间和大了就可以移动滑动窗口起始位置，区间和小了就移动滑动窗口终止位置。这道题元素有可能为负数，无法根据区间大小移动滑动窗口了，因为扩大终止位置可能让区间和减少，缩小起始位置也有可能让区间和增大，无法控制。
