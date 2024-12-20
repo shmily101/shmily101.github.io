@@ -8,6 +8,7 @@ tags:
   - Nuxt3
 categories:
   - GSAP
+  - Animation
 ---
 
 最近在使用 nuxt3 + gsap 编写动画的过程中，发现会有这样的现象：使用 scrollerTigger 进行滚动条的动画控制，在开发过程中动画一切正常，但当我跳转到另一个页面再回到当前动画页的时候，动画的 start 和 end 位置会有概率发生一些偏移，导致动画效果出现问题，但刷新后又会回归正常。

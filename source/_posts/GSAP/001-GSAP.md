@@ -7,4 +7,5 @@ tags:
   - Animation
 categories:
   - GSAP
+  - Animation
 ---
