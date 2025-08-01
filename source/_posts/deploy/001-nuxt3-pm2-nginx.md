@@ -160,4 +160,4 @@ server {
 补充另一个问题：静态资源做了直接读取本地的处理后，进入页面还是所有静态资源报错 403。实际上这是由于文件和目录权限导致的，一般 nginx 以 www-data、nginx 或 nobody 用户运行，我的的静态资源目录 `/root/lingnovatech/.output/public` 默认只有 root 用户有权限，nginx 的普通运行用户没有读取权限，导致 403，需要给所有用户赋予读取权限。这也是我前面说最好不要放在 `/root`文件夹下，生产环境建议将静态资源目录挪到非 /root 目录（如 /srv/ 或 /var/www/），避免直接暴露 root 目录，提升安全性。
 {% endnote %}
 
-做完这一步，访问 `lingnovatech.com`或者`www.lingnovatech.com`就可以正常访问到官网啦。
+做完这一步，访问 `lingnovatech.com`或者`www.lingnovatech.com`就可以正常访问到官网啦✌️。
